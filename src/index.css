@@ -1,0 +1,272 @@
+@import "tailwindcss";
+@config "../tailwind.config.cjs";
+
+/* Portfolio Design System - Minimal, Bold, Modern */
+
+@layer base {
+  :root {
+    /* Neutral backgrounds with subtle warmth */
+    --background: 36 100% 99%;
+    --foreground: 240 6% 10%;
+
+    /* Card and surface colors */
+    --card: 0 0% 100%;
+    --card-foreground: 240 6% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 6% 10%;
+
+    /* Bold accent system - Vibrant Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 91% 70%;
+
+    /* Subtle secondary tones */
+    --secondary: 240 6% 97%;
+    --secondary-foreground: 240 6% 10%;
+
+    /* Muted elements */
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    /* Accent variations */
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    /* System colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 6% 93%;
+    --input: 240 6% 93%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+
+    /* Shadows with primary color */
+    --shadow-elegant: 0 10px 40px -10px hsl(var(--primary) / 0.15);
+    --shadow-glow: 0 0 50px hsl(var(--primary-glow) / 0.3);
+
+    /* Animation timing */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+  --background: 240 6% 6%;
+  --foreground: 0 0% 98%;
+
+  --card: 240 6% 8%;
+  --card-foreground: 0 0% 98%;
+
+  --popover: 240 6% 8%;
+  --popover-foreground: 0 0% 98%;
+
+  /* Use a purple primary in dark mode to match requested aesthetic */
+  --primary: 268 70% 56%; /* purple */
+  --primary-foreground: 0 0% 100%;
+  --primary-glow: 268 70% 40%;
+
+    --secondary: 240 6% 14%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 6% 12%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 6% 20%;
+    --input: 240 6% 20%;
+    --ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    /* set default border color via CSS variable instead of applying a (missing) utility */
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: Inter, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Typography scales */
+  .text-hero {
+    @apply text-6xl font-black leading-none tracking-tight;
+    @variant md {
+      @apply text-7xl;
+    }
+    @variant lg {
+      @apply text-7xl;
+    }
+  }
+
+  .text-display {
+    @apply text-4xl font-bold leading-tight tracking-tight;
+    @variant md {
+      @apply text-5xl;
+    }
+    @variant lg {
+      @apply text-6xl;
+    }
+  }
+
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out forwards;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  /* Interactive elements */
+  .hover-lift {
+    @apply transition-all duration-300;
+    @variant hover {
+      @apply scale-105 shadow-xl;
+    }
+  }
+
+  .hover-glow {
+    @apply transition-all duration-500;
+    @variant hover {
+      @apply shadow-glow;
+    }
+  }
+
+  /* Split card: left half image with subtle gradient, right half content with complementary gradient */
+  .split-card {
+    @apply rounded-2xl overflow-hidden shadow-elegant;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    /* configurable split point (percentage). Adjust to line up with image center. */
+    --split-offset: 50%;
+    max-width: 400px; /* keeps the card narrow and centered */
+    background: none; /* gradients are rendered via pseudo elements so they can meet precisely */
+  }
+  /* Overlay pseudo-elements create the left and right backgrounds which meet at --split-offset */
+  .split-card::before,
+  .split-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* Left gradient stops at the split point */
+  .split-card::before {
+    left: 0;
+    width: var(--split-offset);
+    background: linear-gradient(180deg, hsl(var(--primary) / 0.12), hsl(var(--primary-glow) / 0.06));
+  }
+
+  /* Right gradient starts from the split point to the end */
+  .split-card::after {
+    right: 0;
+    left: var(--split-offset);
+    background: linear-gradient(180deg, transparent, hsl(var(--muted) / 0.03));
+  }
+
+  /* Ensure inner columns render above the gradient overlays */
+  .split-card > * {
+    position: relative;
+    z-index: 10;
+    @apply p-4;
+  }
+
+  .split-card__left {
+    @apply flex items-center justify-center;
+  }
+
+  .split-card__right {
+    @apply text-left pr-8;
+  }
+
+  /* Gradient item text contrast rules */
+  .gradient {
+    color: hsl(var(--foreground)); /* dark text by default */
+  }
+
+  .dark .gradient {
+    color: hsl(var(--primary-foreground)); /* light text in dark mode */
+  }
+
+  .gradient h4, .gradient p {
+    position: relative;
+    z-index: 12;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 30px hsl(var(--primary-glow) / 0.3);
+  }
+  to {
+    box-shadow: 0 0 50px hsl(var(--primary-glow) / 0.6);
+  }
+}
