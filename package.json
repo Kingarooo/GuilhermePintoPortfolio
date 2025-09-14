@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+  "dev": "vite",
+  "build": "vite build",
+  "build:gh": "vite build --outDir docs",
+  "lint": "eslint .",
+  "preview": "vite preview"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.87.4",
