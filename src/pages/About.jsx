@@ -36,9 +36,9 @@ const About = () => {
             <div className="grid md:grid-cols-5 gap-12 items-start">
               <div className="md:col-span-3 space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  My approach is simple: let the work speak for itself. Every project is an opportunity 
-                  to push boundaries and create something truly memorable. 
-                  I am focused on passing the most important message in the most elegant way possible.
+                  My approach is simple: let the work speak for itself.
+                  All projects tell a story.
+                  Focused on transmitting the most important message in the most elegant way possible.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   I like exquisite and a bit weird.
