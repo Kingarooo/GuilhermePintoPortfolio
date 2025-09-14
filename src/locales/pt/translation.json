@@ -1,0 +1,39 @@
+{
+  "whatIDo": {
+    "title": "O que eu faço",
+    "items": [
+      { "title": "Desenvolvimento Full-Stack", "desc": "Sites modernos e responsivos. Tão complexos quanto necessário." },
+      { "title": "Design UI/UX", "desc": "Design que fala com o usuário e converte visitantes em fãs e clientes." },
+      { "title": "Conectar", "desc": "Não quero só um cliente que paga, quero um amigo que fica. Somos humanos." },
+      { "title": "Ouvir", "desc": "Eu ouço, aprendo e aprofundo para te ajudar a moldar o que você quer." }
+    ]
+  },
+  "nav": {
+    "home": "Início",
+    "portfolio": "Portfólio",
+    "about": "Sobre",
+  "contact": "Contacta-me"
+  },
+  "contact": "Contacta-me",
+  "about": {
+    "title": "Sobre",
+    "me": "Mim",
+    "paragraph1": "Minha abordagem é simples: deixe o trabalho falar por si. Todos os projetos contam uma história. Focado em transmitir a mensagem mais importante da forma mais elegante possível.",
+    "paragraph2": "Eu gosto de um design requintado com ideias um pouco estranhas. Ah e se não notaram... adoro cães!",
+    "card": {
+      "leftTitle": "Perfeccionista Detalhista",
+      "leftDesc": "Eu foco em precisão e polimento — pequenos detalhes fazem grandes experiências.",
+      "rightTitle": "Macaco Fluido",
+      "rightDesc": "Brincalhão e adaptável — encontro fluxo em restrições e sigo caminhos criativos adiante."
+    },
+    "quote": "Be like water. Algumas coisas precisam de equilíbrio, outras precisam ser quebradas."
+  },
+  "hero": {
+    "greeting": "Olá, eu sou o Guilherme",
+    "subtitle": "Desenvolvedor Frontend & Designer",
+    "title": "O site dos meus sites",
+    "description": "Uma seleção dos meus projetos favoritos, sem frescura, apenas trabalhos excelentes que estão em uso.",
+    "line1": "Eu não preciso dizer muito,",
+    "line2": "o meu trabalho fala por mim."
+  }
+}

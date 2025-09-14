@@ -1,13 +1,17 @@
 import React from "react";
-import WHAT_I_DO from "@/constants/whatIDo";
+import { useTranslation } from 'react-i18next'
 
-const WhatIDo = ({ items = WHAT_I_DO }) => {
+const WhatIDo = ({ items }) => {
+  const { t } = useTranslation()
+  const translatedItems = items || t('whatIDo.items', { returnObjects: true })
+  const title = t('whatIDo.title')
+
   return (
     <div className="space-y-4 pt-8">
-      <h3 className="text-xl font-semibold text-foreground">What I Do</h3>
+      <h3 className="text-xl font-semibold text-foreground">{title}</h3>
       <div className="grid sm:grid-cols-2 gap-4">
-        {items.map((item, idx) => {
-          const isGradient = idx >= items.length - 2;
+        {translatedItems.map((item, idx) => {
+          const isGradient = idx >= translatedItems.length - 2;
           return (
             <div
               key={item.title}

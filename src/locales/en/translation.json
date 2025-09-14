@@ -1,0 +1,39 @@
+{
+  "whatIDo": {
+    "title": "What I do",
+    "items": [
+      { "title": "Full-stack Development", "desc": "Modern, responsive websites. As complex as you need them to be." },
+      { "title": "UI/UX Design", "desc": "Design that speaks to the soul and converts visitors into fans and customers." },
+      { "title": "Connect", "desc": "I want not a client that pays, but a friend that lasts. Me and you are human." },
+      { "title": "Listen", "desc": "I listen, learn, and dig deeper to help you shape what you want." }
+    ]
+  },
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "contact": "Contacta-me"
+  },
+  "contact": "Contacta-me",
+  "about": {
+    "title": "About",
+    "me": "Me",
+    "paragraph1": "My approach is simple: let the work speak for itself. All projects tell a story. Focused on transmitting the most important message in the most elegant way possible.",
+    "paragraph2": "I like exquisite design and a weird ideas. Also if you haven't noticed, I love dogs!",
+    "card": {
+      "leftTitle": "Detailed Perfectionist",
+      "leftDesc": "I focus on precision and polish — small details make big experiences.",
+      "rightTitle": "Flowing Monkey",
+      "rightDesc": "Playful and adaptable — I find flow in constraints and push creative paths forward."
+    },
+    "quote": "Be like water. Some things need balance, others need to be broken."
+  },
+  "hero": {
+    "greeting": "Hi, I'm Guilherme",
+    "subtitle": "Frontend Developer & Designer",
+    "title": "The website of my websites",
+    "description": "A selection of my favorite projects, no BS, just great work that's being used.",
+    "line1": "I don't need to say much,",
+    "line2": "my work does the talking."
+  }
+}
