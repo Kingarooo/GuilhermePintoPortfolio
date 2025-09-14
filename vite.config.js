@@ -14,8 +14,9 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  // Output to `docs/` so GitHub Pages can serve the built site directly from the repo
+  // GitHub Actions will handle deployment, so we use the default dist folder
+  base: '/GuilhermePintoPortfolio/',
   build: {
-    outDir: 'docs'
+    outDir: 'dist'
   }
 })

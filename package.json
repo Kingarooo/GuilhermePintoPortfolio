@@ -6,7 +6,6 @@
   "scripts": {
   "dev": "vite",
   "build": "vite build",
-  "build:gh": "vite build --outDir docs",
   "lint": "eslint .",
   "preview": "vite preview"
   },
