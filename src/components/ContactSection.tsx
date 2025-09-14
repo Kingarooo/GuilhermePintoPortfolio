@@ -8,7 +8,7 @@ const ContactSection = () => {
 
   return (
     <section className="py-32 md:py-40 px-6 md:px-12 text-center">
-      <div className="max-w-4xl mx-auto animate-fade-in">
+      <div className="max-w-5xl mx-auto animate-fade-in">
         <Button
           variant="hero"
           size="lg"

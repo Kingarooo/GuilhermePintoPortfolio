@@ -26,7 +26,7 @@ const About = () => {
         </Button>
       </div>
 
-      <div className="max-w-4xl mx-auto px-6 md:px-12 py-24 md:py-32">
+      <div className="max-w-5xl mx-auto px-6 md:px-12 py-24 md:py-32">
         <div className="animate-fade-in">
           <h1 className="text-display text-foreground mb-12 about-heading">
             About <span className="text-primary">Me</span>
@@ -72,9 +72,9 @@ const About = () => {
                 <div className="text-center">
                   <Button
                     onClick={() => (window.location.href = "mailto:guipinto12@gmail.com")}
-                    className="w-full text-foreground shadow-sm hover:shadow-md"
+                    className="w-full bg-background hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-600 text-foreground hover:text-white border border-border hover:border-transparent shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105"
                   >
-                    <span className="text-foreground">Get In Touch</span>
+                    <span>Get In Touch</span>
                   </Button>
                 </div>
                 <div className="mt-6 text-center text-sm text-muted-foreground/80">

@@ -5,19 +5,19 @@
 
 @layer base {
   :root {
-    /* Neutral backgrounds with subtle warmth */
-    --background: 36 100% 99%;
-    --foreground: 240 6% 10%;
+    /* Friendlier neutral backgrounds with subtle warmth */
+    --background: 0 0% 98%;
+    --foreground: 240 6% 15%;
 
     /* Card and surface colors */
-    --card: 0 0% 100%;
-    --card-foreground: 240 6% 10%;
+    --card: 0 0% 99%;
+    --card-foreground: 240 6% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 6% 10%;
+    --popover: 0 0% 99%;
+    --popover-foreground: 240 6% 15%;
 
-    /* Bold accent system - Vibrant Blue */
-    --primary: 217 91% 60%;
+    /* Bold accent system - Harder Blue */
+    --primary: 217 91% 55%;
     --primary-foreground: 0 0% 100%;
     --primary-glow: 217 91% 70%;
 
@@ -73,27 +73,28 @@
   }
 
   .dark {
-  --background: 240 6% 6%;
-  --foreground: 0 0% 98%;
+  /* Friendlier dark backgrounds - not pure black */
+  --background: 240 6% 8%;
+  --foreground: 0 0% 95%;
 
-  --card: 240 6% 8%;
-  --card-foreground: 0 0% 98%;
+  --card: 240 6% 10%;
+  --card-foreground: 0 0% 95%;
 
-  --popover: 240 6% 8%;
-  --popover-foreground: 0 0% 98%;
+  --popover: 240 6% 10%;
+  --popover-foreground: 0 0% 95%;
 
   /* Use a purple primary in dark mode to match requested aesthetic */
   --primary: 268 70% 56%; /* purple */
   --primary-foreground: 0 0% 100%;
   --primary-glow: 268 70% 40%;
 
-    --secondary: 240 6% 14%;
+    --secondary: 240 6% 16%;
     --secondary-foreground: 0 0% 98%;
 
     --muted: 240 6% 12%;
     --muted-foreground: 240 5% 65%;
 
-    --accent: 217 91% 60%;
+    --accent: 268 70% 56%; /* purple - matches primary in dark mode */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -196,11 +197,11 @@
     pointer-events: none;
   }
 
-  /* Left gradient stops at the split point */
+  /* Left gradient stops at the split point - harder blue */
   .split-card::before {
     left: 0;
     width: var(--split-offset);
-    background: linear-gradient(180deg, hsl(var(--primary) / 0.12), hsl(var(--primary-glow) / 0.06));
+    background: linear-gradient(180deg, hsl(var(--primary) / 0.25), hsl(var(--primary-glow) / 0.15));
   }
 
   /* Right gradient starts from the split point to the end */
