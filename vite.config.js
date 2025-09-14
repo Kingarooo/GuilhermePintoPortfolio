@@ -14,8 +14,8 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  // GitHub Actions will handle deployment, so we use the default dist folder
-  base: '/GuilhermePintoPortfolio/',
+  // For custom domain, use root path
+  base: '/',
   build: {
     outDir: 'dist'
   }
